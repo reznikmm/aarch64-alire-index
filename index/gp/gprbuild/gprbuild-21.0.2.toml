@@ -1,0 +1,14 @@
+name = "gprbuild"
+version = "21.0.2"
+description = "The GPRBuild Ada/multilanguage build tool"
+maintainers = ["chouteau@adacore.com"]
+maintainers-logins = ["Fabien-Chouteau"]
+
+auto-gpr-with = false
+
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
+[origin."case(os)".linux."case(word-size)".bits-64]
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gprbuild-21.0.0-2/gprbuild-aarch64-linux-21.0.0-2.tar.gz"
+hashes = ["sha256:4ac5503ea535ada22a8c95b5171ea5ee1b84332fac74d1d40c22e08410d4a4c8"]
