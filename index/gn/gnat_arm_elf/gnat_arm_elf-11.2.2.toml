@@ -1,0 +1,20 @@
+name = "gnat_arm_elf"
+version = "11.2.2"
+provides = ["gnat=11.2.2"]
+description = "The GNAT Ada compiler - ARM cross-compiler"
+maintainers = ["chouteau@adacore.com"]
+maintainers-logins = ["Fabien-Chouteau"]
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+
+auto-gpr-with = false
+
+[configuration]
+disabled = true
+
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
+[origin."case(os)".linux."case(word-size)".bits-64]
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-11.2.0-2/gnat-arm-elf-linux64-11.2.0-2.tar.gz"
+hashes = ["sha256:2993f511eb4c77c2ba997ea5dfd1fbd49816474d5312c3f03f5a861edb0c678b"]
+
