@@ -11,4 +11,4 @@ PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(word-size)".bits-64]
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gprbuild-21.0.0-2/gprbuild-aarch64-linux-21.0.0-2.tar.gz"
-hashes = ["sha256:4ac5503ea535ada22a8c95b5171ea5ee1b84332fac74d1d40c22e08410d4a4c8"]
+hashes = ["sha256:8e0c703e3cc3d60e0957cabee419aa67d332c9693b764c10688efe2eac683ed4"]

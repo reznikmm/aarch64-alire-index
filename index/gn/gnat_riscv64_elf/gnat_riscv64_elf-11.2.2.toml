@@ -16,5 +16,5 @@ PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(word-size)".bits-64]
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-11.2.0-2/gnat-riscv64-elf-linux64-11.2.0-2.tar.gz"
-hashes = ["sha256:5ec9c509b7f43c384713396712edf402b04b2a859b154111750b5b2ede11916e"]
+hashes = ["sha256:a31ea1bc1bba3383734c06e1ce29f089e2b8305a8ca7e820c2119d505b5352e4"]
 
