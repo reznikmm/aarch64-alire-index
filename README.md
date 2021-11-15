@@ -33,6 +33,39 @@ alr toolchain --select gnat_native=11.2.2 gprbuild=21.0.2
 alr get --build hello
 ```
 
+## Use in continue integration (CI)
+
+The [Circle CI](https://circleci.com/docs/2.0/arm-resources/) has an ARM
+machine executor in a free plan.
+To use it add a `.circleci/config.yml` YAML configuration, like this:
+
+```yaml
+version: 2.1
+
+jobs:
+  say-hello:
+    resource_class: arm.medium
+    machine:
+      image: ubuntu-2004:202101-01
+    steps:
+      - checkout
+      - run:
+          name: "Build with alr"
+          command: |
+             curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.1.1/alr-1.1.1-bin-aarch64-linux.zip
+             unzip alr-1.1.1-bin-aarch64-linux.zip
+             export PATH=$PWD/bin:$PATH
+             git clone https://github.com/reznikmm/aarch64-alire-index.git
+             alr index --reset-community
+             alr index --add file://$PWD/aarch64-alire-index --name aarch64 --before community
+             alr toolchain --select gnat_native=11.2.2 gprbuild=21.0.2
+             alr build
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
+```
+
 ## Maintainer
 
 [Max Reznik](https://github.com/reznikmm).
