@@ -1,8 +1,8 @@
 # aarch64-alire-index
-> Alire port to aarch64
+> Alire port to aarch64 (Linux)
 
-This repository is a draft port of [Alire](https://alire.ada.dev/) to `aarch64` platform.
-This works in particular on [Raspberry Pi 64-bits](https://ubuntu.com/download/raspberry-pi).
+This repository is a draft port of [Alire](https://alire.ada.dev/) to `aarch64` Linux platform.
+This works in particular on Ubuntu 22.04 and [Raspberry Pi 64-bits](https://ubuntu.com/download/raspberry-pi).
 
 ## Install
 
@@ -46,7 +46,7 @@ jobs:
   say-hello:
     resource_class: arm.medium
     machine:
-      image: ubuntu-2004:202101-01
+      image: cimg/base:current-22.04
     steps:
       - checkout
       - run:
