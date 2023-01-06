@@ -1,6 +1,6 @@
 name = "gnat_arm_elf"
-version = "11.2.2"
-provides = ["gnat=11.2.2"]
+version = "12.2.1"
+provides = ["gnat=12.2.1"]
 description = "The GNAT Ada compiler - ARM cross-compiler"
 maintainers = ["chouteau@adacore.com"]
 maintainers-logins = ["Fabien-Chouteau"]
@@ -15,6 +15,5 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
-url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-11.2.0-2/gnat-arm-elf-linux64-11.2.0-2.tar.gz"
-hashes = ["sha256:d957876a1e341a62a3142227cabad406cbb0ab2217fd2a7ebb43ab95ce03d4a4"]
-
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-12.2.0-1/gnat-arm-elf-linux64-12.2.0-1.tar.gz"
+hashes = ["sha256:45abdd19d838cf34a0ff1849ad60d52c6e75faae18b94af1ab12ed37c9a9c40a"]

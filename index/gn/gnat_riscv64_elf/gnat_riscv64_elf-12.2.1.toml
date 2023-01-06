@@ -1,6 +1,6 @@
 name = "gnat_riscv64_elf"
-version = "11.2.2"
-provides = ["gnat=11.2.2"]
+version = "12.2.1"
+provides = ["gnat=12.2.1"]
 description = "The GNAT Ada compiler - RISC-V cross-compiler"
 maintainers = ["chouteau@adacore.com"]
 maintainers-logins = ["Fabien-Chouteau"]
@@ -15,6 +15,5 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
-url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-11.2.0-2/gnat-riscv64-elf-linux64-11.2.0-2.tar.gz"
-hashes = ["sha256:a31ea1bc1bba3383734c06e1ce29f089e2b8305a8ca7e820c2119d505b5352e4"]
-
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-12.2.0-1/gnat-riscv64-elf-linux64-12.2.0-1.tar.gz"
+hashes = ["sha256:ce4cec1d4c43ebb9b930fed9150f31e7eecfa033d42d05bda495fcf49e7e7708"]

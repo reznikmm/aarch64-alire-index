@@ -9,8 +9,8 @@ This works in particular on [Raspberry Pi 64-bits](https://ubuntu.com/download/r
 1. Download `alr` and add it to the `PATH` environment variable:
 
 ```
-wget https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.1.1/alr-1.1.1-bin-aarch64-linux.zip
-unzip alr-1.1.1-bin-aarch64-linux.zip
+wget https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.2.1/alr-1.2.1-bin-aarch64-linux.zip
+unzip alr-1.2.1-bin-aarch64-linux.zip
 export PATH=$PWD/bin:$PATH
 ```
 
@@ -25,7 +25,7 @@ alr index --add file://$PWD/aarch64-alire-index --name aarch64 --before communit
 3. Install Aarch64 GNAT and `gprbuild`:
 
 ```
-alr toolchain --select gnat_native=11.2.2 gprbuild=21.0.2
+alr toolchain --select gnat_native=12.2.1 gprbuild=22.0.1
 ```
 
 4. Done! Use `alr` as usual:
@@ -52,13 +52,13 @@ jobs:
       - run:
           name: "Build with alr"
           command: |
-             curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.1.1/alr-1.1.1-bin-aarch64-linux.zip
-             unzip alr-1.1.1-bin-aarch64-linux.zip
+             curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.2.1/alr-1.2.1-bin-aarch64-linux.zip
+             unzip alr-1.2.1-bin-aarch64-linux.zip
              export PATH=$PWD/bin:$PATH
              git clone https://github.com/reznikmm/aarch64-alire-index.git
              alr index --reset-community
              alr index --add file://$PWD/aarch64-alire-index --name aarch64 --before community
-             alr toolchain --select gnat_native=11.2.2 gprbuild=21.0.2
+             alr toolchain --select gnat_native=12.2.1 gprbuild=22.0.1
              alr build
 workflows:
   say-hello-workflow:

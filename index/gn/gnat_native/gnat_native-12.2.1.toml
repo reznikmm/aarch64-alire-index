@@ -1,6 +1,6 @@
 name = "gnat_native"
-version = "11.2.2"
-provides = ["gnat=11.2.2"]
+version = "12.2.1"
+provides = ["gnat=12.2.1"]
 description = "The GNAT Ada compiler - Native"
 maintainers = ["chouteau@adacore.com"]
 maintainers-logins = ["Fabien-Chouteau"]
@@ -15,5 +15,5 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
-url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-11.2.0-2/gnat-aarch64-linux-11.2.0-2.tar.gz"
-hashes = ["sha256:960cfd9e2abecd19c55358746db86e56b55b91ca8dd9d95eba7492592acd1d2c"]
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-12.2.0-1/gnat-aarch64-linux-12.2.0-1.tar.gz"
+hashes = ["sha256:54803288aa43d7976c01b0a1e4cb87e4164b0344d4209c0e1903f88d472d69f7"]
