@@ -17,15 +17,15 @@ export PATH=$PWD/bin:$PATH
 2. Clone and setup `aarch64-alire-index`:
 
 ```
-git clone https://github.com/reznikmm/aarch64-alire-index.git
 alr index --reset-community
-alr index --add file://$PWD/aarch64-alire-index --name aarch64 --before community
+alr index --add https://github.com/reznikmm/aarch64-alire-index.git \
+  --name aarch64 --before community
 ```
 
 3. Install Aarch64 GNAT and `gprbuild`:
 
 ```
-alr toolchain --select gnat_native=12.2.1 gprbuild=22.0.1
+alr toolchain --select gnat_native=13.1.1 gprbuild=22.0.1
 ```
 
 4. Done! Use `alr` as usual:
@@ -55,10 +55,9 @@ jobs:
              curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.2.1/alr-1.2.1-bin-aarch64-linux.zip
              unzip alr-1.2.1-bin-aarch64-linux.zip
              export PATH=$PWD/bin:$PATH
-             git clone https://github.com/reznikmm/aarch64-alire-index.git
              alr index --reset-community
-             alr index --add file://$PWD/aarch64-alire-index --name aarch64 --before community
-             alr toolchain --select gnat_native=12.2.1 gprbuild=22.0.1
+             alr index --add https://github.com/reznikmm/aarch64-alire-index.git --name aarch64 --before community
+             alr toolchain --select gnat_native=13.1.1 gprbuild=22.0.1
              alr build
 workflows:
   say-hello-workflow:
