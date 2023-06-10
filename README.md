@@ -18,7 +18,7 @@ export PATH=$PWD/bin:$PATH
 
 ```
 alr index --reset-community
-alr index --add https://github.com/reznikmm/aarch64-alire-index.git \
+alr index --add git+https://github.com/reznikmm/aarch64-alire-index.git \
   --name aarch64 --before community
 ```
 
