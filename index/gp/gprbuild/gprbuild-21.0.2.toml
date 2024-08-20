@@ -10,5 +10,6 @@ auto-gpr-with = false
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(word-size)".bits-64]
+binary = true
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gprbuild-21.0.0-2/gprbuild-aarch64-linux-21.0.0-2.tar.gz"
 hashes = ["sha256:8e0c703e3cc3d60e0957cabee419aa67d332c9693b764c10688efe2eac683ed4"]

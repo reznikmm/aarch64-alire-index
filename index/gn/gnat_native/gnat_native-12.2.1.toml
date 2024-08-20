@@ -15,5 +15,6 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
+binary = true
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-12.2.0-1/gnat-aarch64-linux-12.2.0-1.tar.gz"
 hashes = ["sha256:54803288aa43d7976c01b0a1e4cb87e4164b0344d4209c0e1903f88d472d69f7"]

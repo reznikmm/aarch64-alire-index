@@ -15,9 +15,11 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin."case(os)".linux."case(host-arch)".x86-64]
+binary = true
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-13.1.0-1/gnat-x86_64-linux-13.1.0-1.tar.gz"
 hashes = ["sha256:55533fed0b5b8d852ba590ea09a1ae3ac88489b998ea154ba88a41baab5aa49d"]
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
+binary = true
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-13.1.0-1/gnat-aarch64-linux-13.1.0-1.tar.gz"
 hashes = ["sha256:7b97f8a606c92cd9a8f0d7c2e25f5dccbdd376a277837f60788abc12677dda7c"]

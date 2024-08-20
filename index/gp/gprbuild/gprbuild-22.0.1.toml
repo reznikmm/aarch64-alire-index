@@ -13,5 +13,6 @@ PATH.prepend = "${CRATE_ROOT}/bin"
 disabled = true
 
 [origin."case(os)".linux."case(host-arch)".aarch64]
+binary = true
 url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gprbuild-22.0.0-1/gprbuild-aarch64-linux-22.0.0-1.tar.gz"
 hashes = ["sha256:19730c52a46c32f0f2f4a295418762a0e22645ef663f2a1c1f1b77ea71a4cee4"]

@@ -9,8 +9,8 @@ This works in particular on Ubuntu 22.04 and [Raspberry Pi 64-bits](https://ubun
 1. Download `alr` and add it to the `PATH` environment variable:
 
 ```
-wget https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.2.1/alr-1.2.1-bin-aarch64-linux.zip
-unzip alr-1.2.1-bin-aarch64-linux.zip
+wget https://github.com/reznikmm/aarch64-alire-index/releases/download/v2.0.1/alr-2.0.1-bin-aarch64-linux.zip
+unzip alr-2.0.1-bin-aarch64-linux.zip
 export PATH=$PWD/bin:$PATH
 ```
 
@@ -25,7 +25,7 @@ alr index --add git+https://github.com/reznikmm/aarch64-alire-index.git \
 3. Install Aarch64 GNAT and `gprbuild`:
 
 ```
-alr toolchain --select gnat_native=13.1.1 gprbuild=22.0.1
+alr toolchain --select gnat_native=14.2.1 gprbuild=22.0.1
 ```
 
 4. Done! Use `alr` as usual:
@@ -52,12 +52,12 @@ jobs:
       - run:
           name: "Build with alr"
           command: |
-             curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v1.2.1/alr-1.2.1-bin-aarch64-linux.zip
-             unzip alr-1.2.1-bin-aarch64-linux.zip
+             curl -O -L https://github.com/reznikmm/aarch64-alire-index/releases/download/v2.0.1/alr-2.0.1-bin-aarch64-linux.zip
+             unzip alr-2.0.1-bin-aarch64-linux.zip
              export PATH=$PWD/bin:$PATH
              alr index --reset-community
              alr index --add https://github.com/reznikmm/aarch64-alire-index.git --name aarch64 --before community
-             alr toolchain --select gnat_native=13.1.1 gprbuild=22.0.1
+             alr toolchain --select gnat_native=14.2.1 gprbuild=22.0.1
              alr build
 workflows:
   say-hello-workflow:
